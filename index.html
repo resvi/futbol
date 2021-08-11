@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #000000;  /* fallback for old browsers  */
+            background: -webkit-linear-gradient(to right, #222222, #000000);    /*Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #222222, #000000);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        .container{
+            display: grid;
+            width: 90%;
+            height: 100vh;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+        }
+        .container section{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding: 0px 30px;
+            color: #f1c40f;
+            color: linear-gradient(58deg,
+                rgba(241, 196, 15, 1) 20%,
+                rgba(243, 172, 18, 1) 100%
+  );
+        }
+        .container h1{
+            font-size: 45px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .container section.bxFormulario{
+           width: 90%;
+           height: auto;
+        }
+        .container section.bxFormulario select{
+           width: 200px;
+           padding: 5px;
+           border-radius: 5px;  
+        }
+        .container section.bxFormulario .bxInput{
+           width: 100%;
+           margin-top: 10px ;  
+        }
+        
+        .container section.bxFormulario label{
+           font-size: 20px;
+           font-weight: 600; 
+        }
+        .container section.bxFormulario button{
+           background: #ffd342;
+           border: none;
+           border-radius: 4px;
+           padding: 8px 20px; 
+        }
+        .container section.bxImg{
+            width: 100%;
+            height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="bxFormulario">
+            <h1>Registra tu partido!</h1>
+            <form action="#" method="POST" id="formPartido">
+                <div class="bxInput">
+                    <select name="elejirEquipo" id="primerequipo" >
+                        <option value="opcion1">Opcion 1</option>
+                        <option value="opcion2">Opcion 2</option>
+                    </select>
+                    <label for=""> VS</label>
+                    <select name="elejirEquipo" id="segundoEquipo">
+                        <option value="opcion1">Opcion 1</option>
+                        <option value="opcion2">Opcion 2</option>
+                    </select>
+                </div>
+                <div class="bxInput">
+                    <label for="meeting-time">Fecha:</label>
+                    <input type="datetime-local" id="meeting-time"
+                         name="meeting-time" value="2018-06-12T19:30"
+                            min="2018-06-07T00:00" max="2018-06-14T00:00">
+                </div>
+                <div class="bxInput">
+                    <button type="submit">Guardar</button>
+                </div>
+            </form>
+
+        </section>
+        <section class="bxImg">
+            <img src="futbol2.jpg" alt="">
+        </section>
+
+    </div>
+</body>
+</html>
