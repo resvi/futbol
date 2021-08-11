@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+           
+            background:  #f1c40f;
+            background: linear-gradient(58deg,
+                rgb(36, 34, 27) 20%,
+                rgba(243, 172, 18, 1) 100%  );
+        }
+
+        .container{
+            display: grid;
+            width: 90%;
+            height: 100vh;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+        }
+        .container section{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding: 0px 30px;
+            color: #f1c40f;
+            color: linear-gradient(58deg,
+                rgba(241, 196, 15, 1) 20%,
+                rgba(243, 172, 18, 1) 100%  );
+        }
+        .container h1{
+            font-size: 45px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .container section.bxImg{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .container section.bxImg img{
+            width: 80%;
+        
+        }
+        
+        .container section.bxReultados{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container section.bxResultados div{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.864);
+        }
+        table {
+            width: 100%;
+            text-align: center;
+            height: auto;
+        }
+        table thead th{
+            padding: 10px 5px;
+        }
+        table tbody tr {
+            background: rgba(0, 0, 0, 0.933);
+            border-bottom: 2px solid rgb(65, 65, 65);
+        }
+        table tbody tr td{
+            padding: 5px 3px;
+            box-sizing: border-box;
+        }
+        
+        table tbody tr td input{
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+        } 
+        table tbody tr td button{
+            width: 40px;
+            font-size: 7px;
+            font-weight: 600;
+            background: #f1c40f;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px;
+        }      
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="bxImg">
+            <img src="futbol3.jpg" alt="">
+        </section>
+        <section class="bxResultados">
+            <h1>Resultados</h1>
+            <div>
+
+                <table>
+                    <thead>
+                        <th>Creador</th>
+                        <th>Local</th>
+                        <th>Marcador</th>
+                        <th>Visitate</th>
+                        <th>Hora</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jose Angulo</td>
+                            <td>equipo 1</td>
+                            <td>
+                                <input type="text"><label for=""> <strong> - </strong> </label><input type="text">
+
+                            </td>
+                            <td>equipo 2</td>
+                            <td>20/10/21</td>
+                            <td><button>Add Marcador</button></td>
+                        </tr>
+                        <tr>
+                            <td>Teodoro Pacha</td>
+                            <td>equipo 1</td>
+                            <td><input type="text"><label for=""> - </label><input type="text"></td>
+                            <td>equipo 2</td>
+                            <td>20/10/21</td>
+                            <td><button>Add Marcador</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
