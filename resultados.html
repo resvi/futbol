@@ -19,6 +19,7 @@
         }
 
         .container{
+            position: relative;
             display: grid;
             width: 90%;
             height: 100vh;
@@ -97,7 +98,64 @@
             border-radius: 4px;
             text-align: center;
             padding: 5px;
-        }      
+        }    
+        
+/* desde aqui empieza los estilos del modal */
+
+        div.contenedorModal{
+            width: 111%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.529);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.bxModal{
+            display: grid;
+            width: 600px;
+            grid-template-columns: 1fr;
+            height: auto;
+            min-height: 200px;
+            border-radius: 8px;
+            background: rgb(255, 255, 255);
+            position: relative;
+            color: #f1c40f;
+            box-shadow: 0px 0px 20px #000;
+            padding: 40px 15px;
+        }
+
+        div.bxModal form th{
+            color: black;
+        }
+        
+        div.bxModal form tr td button#save{
+            width: 80%;
+            height: 30px;
+            font-size: 15px;
+
+        }
+        
+        div.bxModal form tr td input{
+            width: 40px;
+        }
+        div.bxModal button#closeModal{
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 100%;
+            border: none;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 20px;
+            position: absolute;
+            margin:10px;
+            justify-self: flex-end;
+            background: #f1c40f;
+
+        }
 
 
     </style>
@@ -124,8 +182,8 @@
                         <tr>
                             <td>Jose Angulo</td>
                             <td>equipo 1</td>
-                            <td>
-                                <input type="text"><label for=""> <strong> - </strong> </label><input type="text">
+                            <td class="goles">
+                                <input type="number"><label for=""> <strong> - </strong> </label><input type="number">
 
                             </td>
                             <td>equipo 2</td>
@@ -138,14 +196,47 @@
                             <td><input type="text"><label for=""> - </label><input type="text"></td>
                             <td>equipo 2</td>
                             <td>20/10/21</td>
-                            <td><button>Add Marcador</button></td>
+                            <td><button id="upDateMarcador">Add Marcador</button></td>
 
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-
+        <div class="contenedorModal">
+            <div class="bxModal">
+                <button id="closeModal">X</button>
+                <form action="#" method="post">
+                    <center>
+                        <h1>Modificar Marcador</h1>
+                    </center>
+                    <table>
+                        <thead>
+                            <th>Equipo 1</th>
+                            <th>Marcador</th>
+                            <th>Equipo 2</th>
+                            <th>Fecha</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    America
+                                </td>
+                                <td>
+                                    <input type="text" value=""><label for=""><strong> - </strong></label> <input type="text">
+                                </td>
+                                <td>
+                                    America
+                                </td>
+                                <td>
+                                    <button type="submit" id="save">Guardar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
